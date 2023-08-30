@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'chaitannyaa/maven-plus-docker'
-      args '-v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
+      args '--user root -v /var/run/docker.sock:/var/run/docker.sock'// mount Docker socket to access the host's Docker daemon
     }
   }
   stages {
