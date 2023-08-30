@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Build and Push Docker Image') {
       environment {
-        DOCKER_IMAGE = "chaitannyaa/java_awesome-cicd:${BUILD_NUMBER}"
+        DOCKER_IMAGE = "daedalus2018/java_awesome-cicd:${BUILD_NUMBER}"
         REGISTRY_CREDENTIALS = credentials('dockerHub')
       }
       steps {
